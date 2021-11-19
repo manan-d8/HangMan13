@@ -1,6 +1,6 @@
 # HangMan13
 
-LiveDemo : https://manan-d8.github.io/HangMan13/
+LiveDemo : [Click Me!](https://manan-d8.github.io/HangMan13/)
 
 ------------------------------------------------------------------
 > INFO 
