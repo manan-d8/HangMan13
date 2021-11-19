@@ -12,10 +12,13 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-$clr-bg: #1f1f1f;
-$clr-1: #4b4b4b;
-$clr-2: #8685ef;
+$clr-bg: #222831;
+$clr-1: #393e46;
+$clr-2: #00adb5;
 $clr-3: #00c89665;
+$clr-green: #92f8b3;
+$clr-red: #e05d5d;
+$clr-shadow: #324b4d;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,16 +33,38 @@ html {
 body {
   background-color: $clr-bg;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.TITLE {
+  font-size: 3rem;
+  margin: 3rem 1rem;
+  //   color: $clr-2;
+  text-decoration: wavy;
+  color: mix($clr-shadow, $clr-2, 8%);
+  // font-size: calc(1em + 20vw) ;
+  font-weight: 900;
+  //   text-shadow: -0.0075em 0.0075em 0 mix($clr-shadow, $clr-2, 94%),
+  //     0.005em 0.005em 0 mix($clr-shadow, $clr-2, 60%),
+  //     0.01em 0.01em 0 mix($clr-shadow, $clr-2, 62%),
+  //     0.015em 0.015em mix($clr-shadow, $clr-2, 64%),
+  //     0.02em 0.02em 0 mix($clr-shadow, $clr-2, 66%),
+  //     0.025em 0.025em 0 mix($clr-shadow, $clr-2, 68%),
+  //     0.03em 0.03em 0 mix($clr-shadow, $clr-2, 70%),
+  //     0.035em 0.035em 0 mix($clr-shadow, $clr-2, 72%);
 }
 
 .frame {
-  @include center;
+  //   @include center;
   border-radius: 1rem;
   background: $clr-1;
   width: 100%;
   max-width: 70rem;
-  //   margin: 1rem;
+  margin: 1rem;
   //   min-height: 50%;
+  height: max-content;
 }
 
 .inBar {
@@ -89,13 +114,13 @@ body {
     }
   }
 }
-
 .dispBar {
   font-size: 5rem;
   text-align: center;
   color: $clr-bg;
+  height: 100%;
   #Disp {
-    color: chartreuse;
+    color: $clr-2;
     font-weight: 900;
   }
   #Latters {
@@ -112,8 +137,8 @@ body {
       cursor: pointer;
       // margin: 0.1rem;
       &:hover {
-        box-shadow: 0 0 1rem chartreuse;
-        color: chartreuse;
+        box-shadow: 0 0 1rem $clr-2;
+        color: $clr-2;
       }
     }
   }
@@ -121,10 +146,11 @@ body {
     // width: 5rem;
     // height: 5rem;
     background: $clr-bg;
-    color: chartreuse;
+    color: $clr-2;
     border-radius: 2rem;
     padding: 1rem;
     margin: 1rem;
+    // margin-bottom: 10rem;
   }
 }
 
@@ -161,11 +187,11 @@ body {
 }
 
 .fail {
-  background: red;
+  background: $clr-red;
 }
 
 .succ {
-  background: green;
+  background: $clr-green;
 }
 
 .def {
