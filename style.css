@@ -13,7 +13,7 @@ html {
 
 body {
   background-color: #1f1f1f;
-  color: #e0e0e0;
+  color: white;
 }
 
 .frame {
@@ -23,20 +23,32 @@ body {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   border-radius: 1rem;
-  background: #4B4B4B;
-  width: auto;
-  min-height: 50%;
+  background: #4b4b4b;
+  width: 100%;
+  max-width: 70rem;
 }
 
 .inBar {
   padding: 1rem;
 }
 
+.inBar .BtnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .inBar #Inp {
   font-size: 4rem;
   border-radius: 1rem;
   margin: 1rem;
-  background: #8685EF;
+  background: #8685ef;
   outline: none;
   border: none;
   padding: 1rem;
@@ -44,17 +56,19 @@ body {
   cursor: pointer;
   font-weight: 700;
   width: 96%;
+  -webkit-box-shadow: 0 0 1rem #1f1f1f;
+          box-shadow: 0 0 1rem #1f1f1f;
 }
 
 .inBar #Inp:focus {
-  -webkit-box-shadow: 0 0 0 0.5rem #4B4B4B, 0 0 0 0.8rem #8685EF;
-          box-shadow: 0 0 0 0.5rem #4B4B4B, 0 0 0 0.8rem #8685EF;
+  -webkit-box-shadow: 0 0 0 0.5rem #4b4b4b, 0 0 0 0.8rem #8685ef;
+          box-shadow: 0 0 0 0.5rem #4b4b4b, 0 0 0 0.8rem #8685ef;
 }
 
 .inBar #btn,
 .inBar #RESET {
-  width: 45%;
-  background: #8685EF;
+  min-width: 15rem;
+  background: #8685ef;
   font-size: 2rem;
   margin: 1rem;
   border: none;
@@ -64,12 +78,14 @@ body {
   font-weight: 700;
   outline: none;
   cursor: pointer;
+  -webkit-box-shadow: 0 0 1rem #1f1f1f;
+          box-shadow: 0 0 1rem #1f1f1f;
 }
 
 .inBar #btn:focus,
 .inBar #RESET:focus {
-  -webkit-box-shadow: 0 0 0 0.5rem #4B4B4B, 0 0 0 0.8rem #8685EF;
-          box-shadow: 0 0 0 0.5rem #4B4B4B, 0 0 0 0.8rem #8685EF;
+  -webkit-box-shadow: 0 0 0 0.5rem #4b4b4b, 0 0 0 0.8rem #8685ef;
+          box-shadow: 0 0 0 0.5rem #4b4b4b, 0 0 0 0.8rem #8685ef;
 }
 
 .dispBar {
@@ -133,7 +149,7 @@ body {
 
 .popup .msg {
   width: 50%;
-  color: #4B4B4B;
+  color: #4b4b4b;
   border-radius: 2rem;
   font-size: 3rem;
   text-align: center;
