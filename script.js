@@ -9,6 +9,11 @@ const lattersList = document.querySelectorAll(".latter");
 const chanceNo = document.querySelector(".chanceNo");
 // console.log(lattersList);
 // let data = ["APPLE", "BANANA", "ORANGE", "KIVI"];
+var incorrect = new Audio("Audio/incorrect1.mp3");
+var correct = new Audio("Audio/positive.wav");
+var winsound = new Audio("Audio/victory-fanfare.wav");
+var losesound = new Audio("Audio/Game-over.mp3");
+// winsound.play();
 let data = [
   "ABLE",
   "ABOUT",
@@ -923,15 +928,20 @@ function checkInWord(ch) {
     latterfound += count;
     document.querySelector("#" + ch).classList.remove("def");
     document.querySelector("#" + ch).classList.add("succ");
+    correct.play();
     if (latterfound === totalLatter) {
       console.log("WON");
       msg.textContent = "You Won!";
       popup.classList.remove("disNone");
+      popup.classList.remove("popbg2");
+      popup.classList.add("popbg1");
+      winsound.play();
       won = true;
     }
   } else {
     document.querySelector("#" + ch).classList.remove("def");
     document.querySelector("#" + ch).classList.add("fail");
+    incorrect.play();
   }
   if (chances > 1) {
     chances--;
@@ -940,6 +950,9 @@ function checkInWord(ch) {
       msg.textContent = "Game Over | Word :" + word;
       popup.classList.remove("disNone");
       console.log("GAME OVER");
+      popup.classList.add("popbg2");
+      popup.classList.remove("popbg1");
+      losesound.play();
     }
   }
 }

@@ -13,9 +13,10 @@
 }
 
 $clr-bg: #222831;
-$clr-1: #393e46;
+$clr-1: hsl(217, 10%, 25%);
 $clr-2: #00adb5;
-$clr-3: #00c89665;
+$clr-3: #92f8b365;
+$clr-4: #e05d5d65;
 $clr-green: #92f8b3;
 $clr-red: #e05d5d;
 $clr-shadow: #324b4d;
@@ -46,22 +47,31 @@ body {
   color: mix($clr-shadow, $clr-2, 8%);
   // font-size: calc(1em + 20vw) ;
   font-weight: 900;
-  //   text-shadow: -0.0075em 0.0075em 0 mix($clr-shadow, $clr-2, 94%),
-  //     0.005em 0.005em 0 mix($clr-shadow, $clr-2, 60%),
-  //     0.01em 0.01em 0 mix($clr-shadow, $clr-2, 62%),
-  //     0.015em 0.015em mix($clr-shadow, $clr-2, 64%),
-  //     0.02em 0.02em 0 mix($clr-shadow, $clr-2, 66%),
-  //     0.025em 0.025em 0 mix($clr-shadow, $clr-2, 68%),
-  //     0.03em 0.03em 0 mix($clr-shadow, $clr-2, 70%),
-  //     0.035em 0.035em 0 mix($clr-shadow, $clr-2, 72%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+// .svgLogo {
+//   position: relative;
+//   &:hover,
+//   &:focus {
+//   }
 
+//   .popuphover {
+//     // display: none;
+//     position: absolute;
+//     top: 5rem;
+//     left: -3rem;
+//     background: $clr-1;
+//     width: 50rem;
+//   }
+// }
 .frame {
   //   @include center;
   border-radius: 1rem;
   background: $clr-1;
   width: 100%;
-  max-width: 70rem;
+  max-width: 60rem;
   margin: 1rem;
   //   min-height: 50%;
   height: max-content;
@@ -87,14 +97,15 @@ body {
     font-weight: 700;
     width: 96%;
     box-shadow: 0 0 1rem $clr-bg; // 0 0 0 0.8rem $clr-2;
-    &:focus {
+    &:focus,
+    &:hover {
       box-shadow: 0 0 0 0.5rem $clr-1, 0 0 0 0.8rem $clr-2;
     }
   }
   #btn,
   #RESET {
-    // width: 45%;
-    min-width: 15rem;
+    width: 100%;
+    min-width: 10rem;
     // max-width: 25rem;
     background: $clr-2;
     font-size: 2rem;
@@ -109,7 +120,8 @@ body {
 
     box-shadow: 0 0 1rem $clr-bg; // 0 0 0 0.8rem $clr-2;
 
-    &:focus {
+    &:focus,
+    &:hover {
       box-shadow: 0 0 0 0.5rem $clr-1, 0 0 0 0.8rem $clr-2;
     }
   }
@@ -160,7 +172,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: $clr-3;
+  // background: $clr-3;
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -168,7 +180,7 @@ body {
   .msg {
     width: 50%;
     // height: 50%;
-    color: $clr-1;
+    color: $clr-2;
     border-radius: 2rem;
     font-size: 3rem;
     text-align: center;
@@ -179,6 +191,7 @@ body {
     background: $clr-bg;
     transform: rotate(-25deg);
     padding: 2rem;
+    box-shadow: 0 0 0 0.5rem $clr-3, 0 0 0 0.8rem $clr-2;
   }
 }
 
@@ -196,4 +209,11 @@ body {
 
 .def {
   background: slategrey;
+}
+
+.popbg1 {
+  background: $clr-3;
+}
+.popbg2 {
+  background: $clr-4;
 }
